@@ -7,3 +7,15 @@
 [Migrating my blog from WordPress to Hugo](https://gomakethings.com/migrating-from-wordpress-to-hugo/)
 
 
+Per stabilire il livello di una TOC (Table of contento via markup con goldfield
+
+  '[markup.tableOfContents]
+  
+    endLevel = 3
+    
+    ordered = false
+    
+    startLevel = 2
+    '
+
+
