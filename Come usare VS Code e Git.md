@@ -57,9 +57,9 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 
 ## Usare un submodulo
 Fare il submodule di un repository:
-**cd /percorsodelsubmodulo**
-**git init**
-**git submodule add https://github.com/dillonzq/LoveIt.git**
-**git status**
+1. **cd /percorsodelsubmodulo**
+2. **git init**
+3. **git submodule add https://github.com/dillonzq/LoveIt.git** (esempio di link)
+4. **git status**
 
-https://www.atlassian.com/git/tutorials/git-submodule
+Vedi questa [spiegazione](https://www.atlassian.com/git/tutorials/git-submodule)
