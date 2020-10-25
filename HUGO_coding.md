@@ -1,3 +1,5 @@
+## Come migrare da Wordpress a Hugo
+
 [Switching From WordPress To Hugo](https://www.smashingmagazine.com/2019/05/switch-wordpress-hugo/)
 
 [Migrating from WordPress to Hugo](https://davegill.io/blog/migrating-from-wordpress-to-hugo/)
@@ -6,8 +8,7 @@
 
 [Migrating my blog from WordPress to Hugo](https://gomakethings.com/migrating-from-wordpress-to-hugo/)
 
-
-Per stabilire il livello di una TOC (Table of contento via markup con goldfield
+## Come stabilire il livello di una TOC (Table of Content via markup con goldfield)
 
   '[markup.tableOfContents]
   
