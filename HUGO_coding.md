@@ -8,9 +8,12 @@
 
 [Migrating my blog from WordPress to Hugo](https://gomakethings.com/migrating-from-wordpress-to-hugo/)
 
+---
+
 ## Come stabilire il livello di una TOC (Table of Content via markup con goldfield)
 
-  '[markup.tableOfContents]
+  '
+  [markup.tableOfContents]
   
     endLevel = 3
     
@@ -18,7 +21,8 @@
     
     startLevel = 2
     '
-    ---
+    
+   ---
 
 ## Usare un css particolare per una pagina
 I am trying to use the Page Resources feature in order to have a specific css style file for a given page.
