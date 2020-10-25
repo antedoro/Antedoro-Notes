@@ -17,5 +17,26 @@ Per stabilire il livello di una TOC (Table of contento via markup con goldfield
     
     startLevel = 2
     '
+    ---
+I am trying to use the Page Resources feature in order to have a specific css style file for a given page.
+I did it as follows:
+
+    adding the resource in the page bundle with the frontmatter of the page
+
+resources:
+  - src: test.css
+    title: style
+
+and adding the file test.css in the page directory.
+Note that this file should be in addition of the basic style of the main theme
+
+    in the single layout I put the following code
+
+{{ with $.Resources.GetMatch "**.css*" }}
+{{ $style := . | minify | fingerprint }}
+<link type=text/css rel="stylesheet" href="{{ $style.Permalink }}">
+{{ end }}
+
+---
 
 
