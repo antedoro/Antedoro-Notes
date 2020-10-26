@@ -1,8 +1,9 @@
-1. **Creare un nuovo sito: ** hugo new site ~/Sites/antedorodesigns
-1. **Generate the HTML For the New Site: ** hugo --verbose
-2. **Avviare il server: **  hugo server --verbose --watch
+## Iniziare ad usare Hugo
+1. **Creare un nuovo sito:** hugo new site ~/Sites/antedorodesigns
+2. **Generate the HTML For the New Site:** hugo --verbose
+3. **Avviare il server:**  hugo server --verbose --watch
 
-Creare un nuovo tema
+## Creare un nuovo tema
     Create skeleton : hugo new theme mytheme
     Compilare il file theme.tolm
         vi themes/mytheme/theme.toml
@@ -13,7 +14,7 @@ Creare un nuovo tema
         source_repo = ""
         tags = ["tags", "categories"]
 
-Configurare il config.toml
+## Configurare il config.toml
     vi config.toml
     theme = "mytheme"
     baseurl = ""
@@ -21,13 +22,13 @@ Configurare il config.toml
     title = "mytheme - totally refreshing"
     MetaDataFormat = "toml"
 
-Generare il sito: hugo --verbose
+**Generare il sito:** hugo --verbose
 
-Rimuovere la cartella /public: rm -rf public
+**Rimuovere la cartella:** /public: rm -rf public
 
-Creare un nuovo post: hugo --verbose new posts/first.md
+**Creare un nuovo post:** hugo --verbose new posts/first.md
 
-Creare un achetipo per ogni contenuto della cartella post:
+**Creare un achetipo per ogni contenuto della cartella post:**
     vi themes/zafta/archetypes/post.md
     +++
     Description = ""
@@ -35,7 +36,7 @@ Creare un achetipo per ogni contenuto della cartella post:
     Categories = []
     +++
 
-Evitare che l'indirizzo della pagina risulti uguale al percorso delle cartelle ma risulti uguale al nome della pagina:
+**Evitare che l'indirizzo della pagina risulti uguale al percorso delle cartelle ma risulti uguale al nome della pagina:**
 $ vi config.toml
 [permalinks]
 	page = "/:title/"
