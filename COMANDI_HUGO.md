@@ -38,7 +38,7 @@
 
 **Evitare che l'indirizzo della pagina risulti uguale al percorso delle cartelle ma risulti uguale al nome della pagina:**
 
-$ vi config.toml
-[permalinks]
-	page = "/:title/"
-	about = "/:filename/"
+	$ vi config.toml
+	[permalinks]
+		page = "/:title/"
+		about = "/:filename/"
