@@ -29,6 +29,7 @@
 **Creare un nuovo post:** hugo --verbose new posts/first.md
 
 **Creare un achetipo per ogni contenuto della cartella post:**
+
     vi themes/zafta/archetypes/post.md
     +++
     Description = ""
