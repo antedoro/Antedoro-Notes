@@ -54,7 +54,7 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 
 5. Carichiamo (push) i file in remoto: **git push -u origin master**
 6. Per scaricare i file da Github.com: **git pull**
-7. Per clonare un progetto: **git clone** urldel progetto
+7. Per clonare un progetto: **git clone** + _url_ del progetto
 
 
 ## Usare un submodulo
