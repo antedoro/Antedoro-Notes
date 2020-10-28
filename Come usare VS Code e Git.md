@@ -20,8 +20,8 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 	1. **git status**
 	2. Risposta: Git ci risponte dicendoci che siamo nel ramo master (master branch), fa un elenco dei file presenti e ci dice di aggiungere i file con il comando _add_
 6. Aggiugiamo i file allo staging area ossia fra i file che possono essere uplodati
-	3. **git add** _nomefile_ nel caso vogliamo aggiugere tutti i file: **git add** .
-	4. Per rimuovere qualche file: **git rm --cached** nomefile
+	1. **git add** _nomefile_ nel caso vogliamo aggiugere tutti i file: **git add** .
+	2. Per rimuovere qualche file: **git rm --cached** nomefile
 7. Facciamo il commit: **git commit**.
 
 	Si apre una finestra che dobbiamo editare:
@@ -29,9 +29,11 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 	Per evitare gi aprire la finesta dei commenti: **git commit -m "commento"**
 	
 	Per uscire premere _esc_ e scrivere _:wq_
+	
 8. Per tornare all'ultimo commit (ultima verione del file salvata): **git checkout --nomedelfile**
 9. Per uno storico dei commit fatti: **git log**
 10. Per tornare indietro ad un particolare commit: **git reset** + numero del commit
+11. Per ignorare un file: aggingere nella root del repository il file _.gitignore_ ed inserire l'elenco dei file da ignorare
 
 ## Lavorare con i branch (rami)
 1. Per creare un nuovo ramo del software: **git branch nomedelramo**
