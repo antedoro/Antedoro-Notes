@@ -65,3 +65,10 @@ Fare il submodule di un repository:
 4. **git status**
 
 Vedi questa [spiegazione](https://www.atlassian.com/git/tutorials/git-submodule)
+
+## Clonare un progetto e i suoi submoduli
+
+Se vuoi clonare un progetto incluso i suoi submoduli: **git clone --recursive url**
+
+Se invece hai gia clionato un progeto e vuoi scaricare anche i submoduli: **git submodule update --init**
+
