@@ -12,19 +12,19 @@
 
 ## Come fare un cilo di for con hugo
 
-'
+'''
 {{ range after 1 (seq 20)}}
 {{ end }}
-'
+'''
 
 oppure 
 
-'
+
 {{ range $index, $num := (seq 20) }}
 $indexStartingAt1 := (add $index 1)
 {{ end }}
 
-'
+
 
 ---
 
