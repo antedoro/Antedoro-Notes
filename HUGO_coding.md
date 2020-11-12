@@ -16,13 +16,17 @@
 {{ range after 1 (seq 20)}}
 {{ end }}
 '
+
 oppure 
+
 '
 {{ range $index, $num := (seq 20) }}
 $indexStartingAt1 := (add $index 1)
 {{ end }}
 
 '
+
+---
 
 ## Come stabilire il livello di una TOC (Table of Content via markup con goldfield)
 
