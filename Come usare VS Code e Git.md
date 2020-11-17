@@ -1,8 +1,8 @@
 # Come usare VS Code e Git
 
-Questo appunti sono giusto giusto un minimo di comandi per newbie come me ma posso essere utili a qualcuno che si trova nella stessa situazione.
+Questo appunti sono giusto giusto un minimo di comandi per newbie come me ma possono essere utili a qualcuno che si trova nella stessa situazione.
 
-In questo e nel prossimo paragrafo vedremo i comandi utili per usare git in locale senza bisogno di repository online. Successivamante vedremo come interarire con un repsitori come [GitHub](https://github.com)
+In questo e nel prossimo paragrafo vedremo i comandi utili per usare git in locale senza bisogno di repository online. Successivamente vedremo come interarire con un repsitory come [GitHub](https://github.com)
 
 ## Comandi base
 
