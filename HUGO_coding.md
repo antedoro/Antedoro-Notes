@@ -12,7 +12,6 @@
 
 ## Come fare un cilo di for con hugo
 
-
 {{ range after 1 (seq 20)}}
   //eseguire un comando
 {{ end }}
@@ -20,10 +19,9 @@
 
 oppure 
 
-
-{{ range $index, $num := (seq 20) }}
-  $indexStartingAt1 := (add $index 1)
-{{ end }}
+  '{{ range $index, $num := (seq 20) }}
+    $indexStartingAt1 := (add $index 1)
+  {{ end }}'
 
 
 
@@ -64,5 +62,109 @@ Note that this file should be in addition of the basic style of the main theme
 {{ end }}
 
 ---
+
+# My Hugo cheat sheet (by https://dev.to/ohhelloana)
+
+
+## The if/else
+
+`{{ if }} // something{{ else }} //something{{ end }}`
+
+## How to check if a value is equal to something
+
+`{{ if eq value_1 value_2 }}`
+
+## How to check if a value is lower than something
+
+`{{ if lt value_1 value_2 }}`
+
+## How to check if a value is greater than something
+
+`{{ if gt value_1 value_2 }}`
+
+## How to combine two checks
+
+This example checks if a value is lower than 5 and greater than 1.
+
+`{{ if and (lt $currentIndex 5) (gt $currentIndex 1) }}`
+
+## How to add a class based on what page you're on
+
+I wanted to add a specific class to a page called "Privacy policy". This page was created inside my content folder and I named its folder privacy-policy and inside it I created an _index.md. The frontmatter of the .md file has a title. Something like: title: Privacy Policy.
+
+I want a specific class to be added to an element when I visit this particular page.
+
+`<main class="{{ if eq .Name `Privacy Policy` }}privacy{{ end }}" id="main"> My content</main>`
+
+## How to update aria-current in a menu
+
+This particular example assumes we're iterating on a menu set in the config.
+
+`<nav aria-label="Main menu"> <ul> {{ $currentPage := . }} {{ range .Site.Menus.main }} <li> <a aria-current="{{if or ($currentPage.IsMenuCurrent `main` .) ($currentPage.HasMenuCurrent `main` .)}}true{{else}}false{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> </li> {{ end }} </ul></nav>`
+
+## How to only render something if there is more than one page in a section.
+
+This example assumes we have a section called "latest" that has some posts inside it.
+
+`{{ $news := where .Site.RegularPages "Section" "latest" }} {{ $postCount := len $news }}{{ if gt $postCount 0 }}    <section> {{.Title}}    </section>{{end}}`
+
+## How to only show the latest three posts of a section
+
+This example assumes we have a section called "latest" that has some posts inside it.
+
+`{{ $news := where .Site.RegularPages "Section" "latest" }} <ul> {{ range first 3 $news }} <li>{{.Title}}</li> {{ end }}</ul>`
+
+## How to create a collection of posts that have a certain param and value
+
+This example wants to collect all the posts inside a section that have a specific param defined in the frontmatter.For this example, let's assume that we're looking for all the posts inside a section called "latest" that have type: summary.
+
+`{{ $services := where .Site.RegularPages "Section" "latest" }} {{ $finalList := where $services "Params.type" "summary" }}`
+
+## How to create a collection of posts that match a certain value
+
+This example creates a variable called test that iterates over the pages inside a section called case-studies that have the value of draft as false.
+
+`{{$test := where (where .Site.RegularPages "Section" "case-studies") ".Params.draft" false }}`
+
+## How to range and order by the value of a param
+
+This example assumes that a page has order in the frontmatter and a number.
+
+`{{ $services := where .Site.RegularPages "Section" "latest" }}{{ range $services.ByParam "order" }} // your content{{ end }}`
+
+## How to replace a character with something else
+
+I had a specific situation where I had to replace "_" with a blank space in a couple of words .
+
+`{{ replace $tag "_" " "}}`
+
+## How to get the content of an _index.md inside a partial
+
+Imagine you have a partial (like a banner) and could like to bring the content of the index of a section to it (in this case, for example an "about" page).
+
+`{{ with .Site.GetPage "/about" }} {{ .Content }}{{ end }}`
+
+## How to get Pages that have a value that resolves into false
+
+This example collects all the pages inside a section that have the value "false" for draft.
+
+`where .Pages ".Params.draft" false`
+
+## How to show a list and add commas
+
+This example attempts to re-create something like the following:
+
+"Animals that are very chill: capybaras, tortoise, dogs."
+
+`  <div> <p>Animals that are very chill: {{ $list := (where .Site.Pages "Section" "animals") }} {{ $len := (len $list) }} {{ range where .Site.Pages "Section" "animals" }} {{ range $index, $element := .Pages }} {{ $currentIndex := (add $index 1)}} {{ $currentLength := (sub $len 1 )}} {{.Title}}{{ if eq $currentIndex $currentLength }}. {{else}}, {{end}} {{ end }} {{ end }} </p> </div>`
+
+## Iterate inside a section and combine options
+
+Assuming you're adding this to the list.html of a section, this example shows how to get all the pages of a section that have the param draft as false and putting them in reverse chronological order.
+
+`{{ range ((where .Pages ".Params.draft" false).ByParam "order").Reverse }}`
+
+I think these are my most used logic examples that I needed to look up when I first build some websites using Hugo. I will update this if I remember anything else.
+
 
 
