@@ -37,7 +37,7 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 
 ## Lavorare con i branch (rami)
 1. Per creare un nuovo ramo del software: **git branch nomedelramo**
-2. Per vedere quanti branch ci sono **git branch** con l'asterisco è indicato il branch attivo
+2. Per vedere quanti branch ci sono **git branch** con l'asterisco è indicato il branch attivo (**git branch -a** per vedere anche i rami in remoto)
 3. Per spostarsi e lavorare su un determinato ramo: **git checkout nomedelramo**
 4. Per aggiungere e fare in commit al ramo appena creati vedi paragrafo precendere (add e commit)
 5. Per unire i due rami master ed un ramo: **git merge** 
