@@ -74,5 +74,5 @@ Se invece hai gia clionato un progeto e vuoi scaricare anche i submoduli: **git 
 
 ## Come configurare una repositary git sul proprio server
 
-[How to Deploy a Website to a Remote Server Using GIT](https://hackernoon.com/deploy-website-to-remote-server-using-git-da604880563)
+[How to Deploy a Website to a Remote Server Using GIT](https://hackernoon.com/deploy-website-to-remote-server-using-git-da6048805637)
 
