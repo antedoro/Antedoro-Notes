@@ -13,7 +13,7 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 3. Inizializzare git da dentro la cartella del progetto: **git init**
    1. Git ti risponderà in questo modo:
    2. _Initialized empty Git repository in /Users/utente/percorso/.git/_
-4. Configurare git con il proprio username e la mail
+4. Configurare git con il proprio username e la mail (basta la prima volta)
    1. **git config --global user.name "tuonome"**
    2. **git config --global user.email "tuaemail"**
 5. Controlliamo lo status del repository locale:
