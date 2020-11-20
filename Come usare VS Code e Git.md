@@ -33,7 +33,8 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 8. Per tornare all'ultimo commit (ultima verione del file salvata): **git checkout --nomedelfile**
 9. Per uno storico dei commit fatti: **git log**
 10. Per tornare indietro ad un particolare commit: **git reset** + numero del commit
-11. Per ignorare un file: aggingere nella root del repository il file _.gitignore_ ed inserire l'elenco dei file da ignorare
+11. Per ignorare un file: aggingere nella root del repository il file _.gitignore_ ed inserire l'elenco dei file da ignorare.
+	Una buona lista di file riccornti da ignorare la trovi qui: (gitignore list)[https://github.com/github/gitignore]
 
 ## Lavorare con i branch (rami)
 1. Per creare un nuovo ramo del software: **git branch nomedelramo**
