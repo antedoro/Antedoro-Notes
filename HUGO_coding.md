@@ -63,6 +63,9 @@ Note that this file should be in addition of the basic style of the main theme
 
 ---
 
+## Come contare il numero di parole in un .Content
+**<p>Numero di parole: {{.FuzzyWordCount}}</p>**
+
 # My Hugo cheat sheet (by https://dev.to/ohhelloana)
 
 
