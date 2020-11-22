@@ -42,6 +42,23 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 3. Per spostarsi e lavorare su un determinato ramo: **git checkout nomedelramo**
 4. Per aggiungere e fare in commit al ramo appena creati vedi paragrafo precendere (add e commit)
 5. Per unire i due rami master ed un ramo: **git merge** 
+	PS: Per ignorare dei file dirante il merge fare cosi:
+	Ad esempio si hanno 2 rami: master e dev
+	Avendo creto un file nel ramo dev che si vuole ignorare durante il merge
+	
+	'
+	git config --global merge.ours.driver true
+	git checkout master
+	echo "path/file_to_ignore merge=ours" >> .gitattributes
+	git merge dev
+	'
+	
+	E' possibile ignorare anche tutti i file con la stessa estensione:
+	Ad esempio ignorare tutti i file .txt:
+	
+	'
+	echo "*.txt merge=ours" >> .gitattributes	
+	'
 
 ## Integrazione con GitHub.com
 
