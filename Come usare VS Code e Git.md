@@ -63,6 +63,14 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 	Ad esempio ignorare tutti i file .txt:
 	
 	`echo "*.txt merge=ours" >> .gitattributes`
+	
+6. Cancellare un ramo LOCALMENTE
+	Git non permette di cancellare il ramo attivo (non si può cancellare il ramo in cui si è seduti!) quindi bisogna prima mettersi nel ramo principale:
+	`git checkout master` e poi cancellare il ramo: `git branch -d <branch>`. L'opzione -d cancella il ramo soltanto se è già stato pushato e merged col ramo remoto.  Usando l'opzione -D si forza la cancellazione anche se il ramo non è stato pushato e merged con lamo remoto. Ora il ramo è stato candellato localmente.
+
+7. Cancellare un ramo REMOTO
+	`git push <remote> --delete <branch>`
+	In caso il ramo remoto è stato precendentemente cancellato riceviamo un errore ma basta sincronizzare il tutto col comando: `git fetch -p`.
 
 ## Integrazione con GitHub.com
 
