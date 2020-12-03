@@ -10,7 +10,7 @@
 
 ---
 
-## Come fare un cilo di for con hugo
+## Come fare un ciclo di for con hugo
 
 {{ range after 1 (seq 20)}}
   //eseguire un comando
