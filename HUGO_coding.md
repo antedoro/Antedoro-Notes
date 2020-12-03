@@ -169,5 +169,16 @@ Assuming you're adding this to the list.html of a section, this example shows ho
 
 I think these are my most used logic examples that I needed to look up when I first build some websites using Hugo. I will update this if I remember anything else.
 
+## Easy way to serve responsive images with Hugo
+`
+{{ image := .Resources.ByType “image” }}
+{{ with $image }}
+{{ range $index, $image := . }}
+{{ if eq index 0}} {{ partial "imghp" (dict "Site" .Site “image” $image) }}
+{{ end }}
+{{ end }}
+{{ end }}
+`
+
 
 
