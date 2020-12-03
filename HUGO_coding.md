@@ -172,11 +172,17 @@ I think these are my most used logic examples that I needed to look up when I fi
 ## Easy way to serve responsive images with Hugo
 `
 {{ image := .Resources.ByType “image” }}
+
 {{ with $image }}
+
 {{ range $index, $image := . }}
+
 {{ if eq index 0}} {{ partial "imghp" (dict "Site" .Site “image” $image) }}
+
 {{ end }}
+
 {{ end }}
+
 {{ end }}
 `
 
