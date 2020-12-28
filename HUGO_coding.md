@@ -209,4 +209,42 @@ Inside the header partial you can include every custom stylesheet from above bes
 
 This way you don’t touch the header partial at all but you’re still able to overwrite CSS classes.
 
+## Usare un particolare css per un particolare post/page
+
+A perhaps more flexible solution for themes would be add an empty “extra-in-head.html” partial. This way, users can put anything into the head by overriding “extra-in-head.html”.
+
+It may for example be that for performance reasons, it is desired to include the css directly in the HTML, thereby eliminating a server request.
+
+Or it may be that the user want to include some css on a specific page. He can then create an “extra-in-head.html” partial which includes the CSS specified in the frontmatter, ie something like this:
+
+`
+frontmatter:
+
++++
+css = "contact"
+...
+`
+
+extra-in-head.html:
+
+
+`
+{{ if eq .Params.css "contact"}}
+{{ template "css/contact.html" }}
+{{ end }}
+
+{{ if eq .Params.css "about"}}
+{{ template "css/about.html" }}
+{{ end }}
+
+layouts/css/contact.html:
+
+<style>
+  h1 {
+    margin: 40px;
+  }
+</style>
+`
+
+
 
