@@ -187,6 +187,26 @@ I think these are my most used logic examples that I needed to look up when I fi
 {{ end }}
 
 `
+## Aggiungere un css custom
 
+This is a common problem when users try to customize a theme. In some of my themes I include an option to easily insert custom stylesheets. Maybe you can do a pull request to add the following scheme to the theme:
+
+Inside the config file I assign an array to a variable:
+
+`
+[params]
+    custom_css = ["css/foo.css", "css/bar.css"]`
+
+You can reference as many stylesheets as you want. Their paths need to be relative to the static folder.
+
+Inside the header partial you can include every custom stylesheet from above beside the original one:
+
+`
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+`
+
+This way you don’t touch the header partial at all but you’re still able to overwrite CSS classes.
 
 
