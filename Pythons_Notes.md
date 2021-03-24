@@ -1,5 +1,22 @@
 # Python notes
 
+## Create a virtual envirorment
+
+To create a virtual environment, go to your project’s directory and run venv. If you are using Python 2, replace venv with virtualenv in the below commands.
+
+On macOS and Linux:
+
+`python3 -m venv env`
+
+## Activating a virtual environment
+
+`source env/bin/activate`
+
+## Leaving the virtual environment
+
+`deactivate`
+
+
 ## Setup requirements
 
 You can use pipreqs to automatically generate a requirements.txt file based on the import statements that the Python script(s) contain. 
