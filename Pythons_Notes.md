@@ -35,3 +35,11 @@ It will generate the following requirements.txt file:
 which you can install with:
 
 `pip3 install -r requirements.txt`
+
+## Freezing dependencies
+
+Pip can export a list of all installed packages and their versions using the freeze command:
+
+`python3 -m pip freeze`
+
+
