@@ -87,6 +87,23 @@ Tutti comandi di seguito riportati possono essere eseguiti su un terminale ester
 6. Per scaricare i file da Github.com: `git pull`
 7. Per clonare un progetto: `git clone + url del progetto`
 
+## How To Use Git Branches with Git Merge
+create branch and switch to it
+
+`git checkout -b branch_name`
+
+commit changes
+`...`
+
+change back to master/dev
+`git checkout master`
+
+pull latest changes
+`git pull`
+
+merge with branch
+`git merge branch_name`
+
 ## Usare un submodulo
 Fare il submodule di un repository:
 
