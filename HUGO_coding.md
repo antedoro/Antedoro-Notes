@@ -27,6 +27,8 @@ oppure
 
 ---
 
+[Different ways to use the range method in Hugo](https://www.markusantonwolf.com/blog/loop-through-sorted-content-in-hugo/)
+
 ## Come stabilire il livello di una TOC (Table of Content via markup con goldfield)
 
   '
@@ -242,6 +244,24 @@ layouts/css/contact.html:
     margin: 40px;
   }
 </style>`
+
+## Manipulating images
+
+[Different ways to use the range method in Hugo](https://www.markusantonwolf.com/blog/guide-to-image-processing-in-hugo-jamstack/)
+
+[Different ways to get an image as page resource in Hugo](https://www.markusantonwolf.com/blog/guide-for-different-ways-to-access-your-image-resources/)
+
+[Simple image render hook template for responsive images](https://discourse.gohugo.io/t/simple-image-render-hook-template-for-responsive-images/22464)
+
+[Hugo Responsive Images With Markdown Render Hook](https://www.bennettnotes.com/notes/hugo-responsive-images-with-markdown-render-hook/)
+
+[How To Add Image Processing to Your Hugo Website and Improve Performance](https://alexlakatos.com/web/2020/07/17/hugo-image-processing/)
+
+[responsive-images](https://github.com/UtkarshVerma/hugo-modules/tree/main/responsive-images)
+
+[Images](https://www.sametbh.com/docs/64-programming/static-site-generators/hugo/adding-images-to-hugo/)
+
+[Using responsive images effortlessly with Hugo](https://bitbanged.com/posts/using-responsive-images-effortlessly-with-hugo/)
 
 
 
